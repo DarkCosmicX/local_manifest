@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <!-- Remote -->
+   	<remote  name="RMX1821-devs"
+		fetch="https://github.com/RMX1821-devs" />
+   	<remote  name="RMX1821-dev"
+		fetch="https://gitlab.com/RMX1821-dev" />
+  <remote  name="CodeBreaker08"
+		fetch="https://github.com/CodeBreaker08" />
+  <remote  name="clang"
+		fetch="https://github.com/Amritorock" />
+
+   <!-- Device Trees -->
+   <project path="device/realme/RMX1821" name="android_device_realme_RMX1821" revision="aosp-13" remote="CodeBreaker08" />
+   <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr" revision="lineage-20.0" remote="RMX1821-devs" />
+
+   <!-- Kernel Source -->
+   <project path="kernel/realme/RMX1821" name="android_kernel_realme_RMX1821" revision="Q" remote="RMX1821-devs" />
+
+   <!-- Vendor Blobs -->
+   <project path="vendor/realme/RMX1821" name="android_vendor_realme_RMX1821" revision="lineage-20.0" remote="RMX1821-dev" />
+   <project path="vendor/realme/RMX1821-ims" name="android_vendor_realme_RMX1821-ims" revision="lineage-20.0" remote="RMX1821-dev" />
+
+       <!-- Clang -->
+  <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="clang-r450784d" remote="clang" revision="master" clone-depth="1" />
+
+  <!-- Replacement -->
+  <remove-project name="build" />
+  <remove-project name="external_selinux" />
+  <remove-project name="frameworks_av" />
+  <remove-project name="packages_modules_Wifi" />
+</manifest>
